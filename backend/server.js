@@ -4,7 +4,7 @@ const cors = require('cors');
 const { handleQuery } = require('./services/geminiService.js');
 const { initCollection } = require('./vectorstore/qdrantClient.js');
 const { default: chalk } = require('chalk');
-const port = 3001
+const PORT = process.env.PORT || 3001;
 
 app.use(cors());
 app.use(express.json());
@@ -45,5 +45,5 @@ app.post('/reset', (req, res) => {
 });
 
 app.listen(port, () => {
-  log(chalk.green(`Server running at http://localhost:${port}`));
+  log(chalk.green(`Server running at http://localhost:${PORT}`));
 });
