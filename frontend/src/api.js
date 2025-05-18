@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:3001';
+const BASE_URL = 'https://rag-chatbot-nexl.onrender.com';
 
 // Function to send a message
 export const sendMessage = async ({ session_id, query }) => {
