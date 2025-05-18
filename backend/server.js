@@ -44,6 +44,6 @@ app.post('/reset', (req, res) => {
   res.json({ status: 'Session reset successfully' });
 });
 
-app.listen(port, () => {
+app.listen(PORT, () => {
   log(chalk.green(`Server running at http://localhost:${PORT}`));
 });
